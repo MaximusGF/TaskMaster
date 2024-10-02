@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Tarefas - Estilo Kanban</title>
+    <link rel="stylesheet" href="TaskMaster.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Menu</h2>
+        <nav>
+            <ul>
+                <li><a href="#" id="all-tasks">Todas as Tarefas</a></li>
+                <li><a href="#" id="open-tasks">Abertas</a></li>
+                <li><a href="#" id="completed-tasks">Concluídas</a></li>
+            </ul>
+        </nav>
+        <div class="calendar">
+            <h3>Calendário</h3>
+            <div class="calendar-controls">
+                <button id="prev-month">&lt;</button>
+                <span id="month-year"></span>
+                <button id="next-month">&gt;</button>
+            </div>
+            <div id="calendar"></div>
+        </div>
+    </aside>
+
+    <div class="main-content">
+        <h1>Gerenciador de Tarefas - Kanban</h1>
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Nome da Tarefa" required>
+            <input type="date" id="task-date" required>
+            <input type="time" id="task-time" required> <!-- Novo campo para o horário -->
+            <button type="submit">Adicionar Tarefa</button>
+        </form>
+
+        <div class="kanban-board">
+            <div class="kanban-column" id="todo-column">
+                <h2>Abertas</h2>
+                <ul id="todo-list"></ul>
+            </div>
+            <div class="kanban-column" id="completed-column">
+                <h2>Concluídas</h2>
+                <ul id="completed-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="TaskMaster.js"></script>
+</body>
+</html>

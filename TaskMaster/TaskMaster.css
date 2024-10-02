@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    background-color: #4a148c;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    background-color: #6a1b9a;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #8e24aa;
+}
+
+.calendar {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#month-year {
+    font-weight: bold;
+    color: #4a148c;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 2px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background-color: #d1c4e9;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.main-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"] { /* Adicione o estilo para o campo de horário */
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6a1b9a;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.kanban-column {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+}
+
+.kanban-column h2 {
+    text-align: center;
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #1e1351;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.complete-btn {
+    background-color: #5bc0de;
+}
+
+button.complete-btn:hover {
+    background-color: #31b0d5;
+}
+
+button.edit-btn {
+    background-color: #f0ad4e;
+}
+
+button.edit-btn:hover {
+    background-color: #ec971f;
+}
+
+button.delete-btn {
+    background-color: #d9534f;
+}
+
+button.delete-btn:hover {
+    background-color: #c9302c;
+}
